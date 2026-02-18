@@ -69,6 +69,7 @@ UI/UX
 job-tracker
 
   frontend  (Next.js client)
+  
   backend   (Node.js API server)
 
 
