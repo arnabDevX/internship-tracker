@@ -67,6 +67,7 @@ UI/UX
 
 
 job-tracker
+
  ├── frontend  (Next.js client)
  └── backend   (Node.js API server)
 
@@ -80,6 +81,7 @@ job-tracker
 
 
 git clone https://github.com/arnabDevX/internship-tracker.git
+
 cd internship-tracker
 
 
@@ -89,9 +91,13 @@ cd internship-tracker
 
 
 cd backend
+
 npm install
+
 npx prisma generate
+
 npm run dev
+
 
 Server runs on:
 
@@ -105,10 +111,14 @@ http://127.0.0.1:5050
 
 
 cd frontend
+
 npm install
+
 npm run dev
 
+
 Frontend runs on:
+
 
 
 http://localhost:3000
@@ -149,7 +159,9 @@ Applications
 
 Import API routes into Postman and test with Bearer Token authentication:
 
+
 Authorization: Bearer <JWT_TOKEN>
+
 
 
 ⸻
