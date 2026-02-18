@@ -14,6 +14,7 @@ In future production deployment, the system will fetch real-time internship list
 🏗️ Tech Stack
 
 Frontend
+
 	•	Next.js (React Framework)
 	•	Tailwind / Custom Glass UI Styling
 	•	JWT based authentication handling
