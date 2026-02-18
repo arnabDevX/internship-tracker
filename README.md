@@ -20,11 +20,13 @@ Frontend
 	•	JWT based authentication handling
 
 Backend
+
 	•	Node.js + Express.js
 	•	Prisma ORM
 	•	PostgreSQL / MySQL (depending on environment)
 
 Authentication & Security
+
 	•	JWT Token Authentication
 	•	Password Hashing (bcrypt)
 	•	Protected Routes Middleware
@@ -33,16 +35,20 @@ Authentication & Security
 
 ✨ Features
 
+
 Authentication
+
 	•	Register with OTP verification
 	•	Login with JWT token
 	•	Secure logout
 
 Dashboard
+
 	•	Animated glass UI sidebar
 	•	Real-time stats (Total / Interview / Offer / Rejected / Success Rate)
 
 Application Management (CRUD)
+
 	•	Add application
 	•	Edit application
 	•	Delete application (with confirmation popup)
@@ -50,6 +56,7 @@ Application Management (CRUD)
 	•	Status colored badges
 
 UI/UX
+
 	•	Glassmorphism design
 	•	Animated typing effects
 	•	Success / Error popup notifications
@@ -57,6 +64,7 @@ UI/UX
 ⸻
 
 📂 Project Structure
+
 
 job-tracker
  ├── frontend  (Next.js client)
@@ -67,7 +75,9 @@ job-tracker
 
 ⚙️ Setup Instructions
 
+
 1️⃣ Clone Repository
+
 
 git clone https://github.com/arnabDevX/internship-tracker.git
 cd internship-tracker
@@ -77,12 +87,14 @@ cd internship-tracker
 
 2️⃣ Backend Setup
 
+
 cd backend
 npm install
 npx prisma generate
 npm run dev
 
 Server runs on:
+
 
 http://127.0.0.1:5050
 
@@ -91,11 +103,13 @@ http://127.0.0.1:5050
 
 3️⃣ Frontend Setup
 
+
 cd frontend
 npm install
 npm run dev
 
 Frontend runs on:
+
 
 http://localhost:3000
 
@@ -103,6 +117,7 @@ http://localhost:3000
 ⸻
 
 🔐 Authentication Flow
+
 	1.	User registers → OTP sent
 	2.	OTP verified → Account created
 	3.	Login → JWT token generated
@@ -113,12 +128,15 @@ http://localhost:3000
 
 📡 API Endpoints (Core)
 
+
 Auth
+
 	•	POST /api/auth/send-otp
 	•	POST /api/auth/verify-otp
 	•	POST /api/auth/login
 
 Applications
+
 	•	GET /api/applications
 	•	POST /api/applications
 	•	PUT /api/applications/:id
@@ -128,6 +146,7 @@ Applications
 
 📘 Postman Testing
 
+
 Import API routes into Postman and test with Bearer Token authentication:
 
 Authorization: Bearer <JWT_TOKEN>
@@ -136,6 +155,7 @@ Authorization: Bearer <JWT_TOKEN>
 ⸻
 
 🔒 Security Practices
+
 	•	Password hashing using bcrypt
 	•	JWT verification middleware
 	•	Protected API routes
@@ -144,6 +164,7 @@ Authorization: Bearer <JWT_TOKEN>
 ⸻
 
 📈 Production Scaling Plan
+
 
 To scale the application for production:
 	1.	Move JWT to HTTP-Only cookies (prevent XSS)
@@ -159,6 +180,7 @@ To scale the application for production:
 
 
 👨‍💻 Author
+
 
 Arnab Ghosh
 
