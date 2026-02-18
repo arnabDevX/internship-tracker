@@ -1,0 +1,45 @@
+/* Animated gradient background */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .bg-animated {
+    background: linear-gradient(-45deg, #acb8ef, #c084fc, #f9a8d4, #93c5fd);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+  }
+  
+  /* Glassmorphism card */
+  .glass-card {
+    backdrop-filter: blur(18px);
+    background: rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  }
+  
+  /* Floating effect */
+  @keyframes floaty {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .floaty {
+    animation: floaty 4s ease-in-out infinite;
+  }
+  
+  /* Button glow */
+  .btn-glow:hover {
+    box-shadow: 0 0 20px rgba(99,102,241,0.6);
+    transform: translateY(-2px);
+    transition: all .25s ease;
+  }
+  
+  /* Input focus */
+  .input-focus:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 2px rgba(99,102,241,0.2);
+  }

@@ -1,0 +1,65 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum JobType {
+  INTERNSHIP
+  FULL_TIME
+}
+
+enum ApplicationStatus {
+  APPLIED
+  OA
+  INTERVIEW
+  REJECTED
+  OFFER
+}
+
+enum Priority {
+  LOW
+  MEDIUM
+  HIGH
+}
+
+model User {
+  id          Int           @id @default(autoincrement())
+  name        String
+  email       String        @unique
+  password    String
+  createdAt   DateTime      @default(now())
+  applications Application[]
+}
+
+model Application {
+  id           Int                @id @default(autoincrement())
+  userId       Int
+  companyName  String
+  role         String
+  jobType      JobType
+  status       ApplicationStatus  @default(APPLIED)
+  appliedDate  DateTime
+  deadline     DateTime?
+  location     String?
+  salary       String?
+  jobLink      String?
+  notes        String?
+  priority     Priority           @default(MEDIUM)
+  createdAt    DateTime           @default(now())
+  updatedAt    DateTime           @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model PendingUser {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  password  String
+  otp       String
+  expiresAt DateTime
+}
